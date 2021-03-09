@@ -6,9 +6,10 @@
 ## Software
 [rtorrent](https://rakshasa.github.io/rtorrent/) - An ncurses-based bittorrent application
 
-## Get the image from Docker Hub
+## Get the image from Docker Hub or build it locally
 ```
 docker pull fullaxx/rtorrent
+docker build -t="fullaxx/rtorrent" github.com/fullaxx/rtorrent
 ```
 
 ## Run the image
@@ -35,9 +36,4 @@ Configuration: You can place a custom rtorrent.rc in /srv/docker/rtorrent/config
 Session State: Use this to save your session for fast restore/resume
 ```
 -v /srv/docker/rtorrent/session:/rtorrent/session
-```
-
-## Build it locally using the github repository
-```
-docker build -t="fullaxx/rtorrent" github.com/fullaxx/rtorrent
 ```
