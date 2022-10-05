@@ -1,7 +1,7 @@
 # A small docker image running rtorrent
 
 ## Base Docker Image
-[Ubuntu](https://hub.docker.com/_/ubuntu) 18.04 (x64)
+[Ubuntu](https://hub.docker.com/_/ubuntu) 20.04 (x64)
 
 ## Software
 [rtorrent](https://rakshasa.github.io/rtorrent/) - An ncurses-based bittorrent application
@@ -39,5 +39,5 @@ Session State: Use this to save your session for fast restore/resume
 
 ## Build it locally using the github repository
 ```
-docker build -t="fullaxx/rtorrent" github.com/fullaxx/rtorrent
+docker build -t="fullaxx/rtorrent" github.com/Fullaxx/rtorrent
 ```
