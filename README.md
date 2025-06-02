@@ -1,15 +1,33 @@
-# A small docker image running rtorrent
+# rtorrent
+rtorrent running in docker
 
 ## Base Docker Image
-[Ubuntu](https://hub.docker.com/_/ubuntu) 20.04 (x64)
+[Alpine](https://hub.docker.com/_/alpine) (x64) \
+[Debian](https://hub.docker.com/_/debian) (x64) Bookworm/Bullseye \
+[Ubuntu](https://hub.docker.com/_/ubuntu) (x64) Noble/Jammy/Focal
 
 ## Software
 * [rtorrent](https://rakshasa.github.io/rtorrent/) - An ncurses-based bittorrent application
 
 ## Get the image from Docker Hub or build it locally
 ```
-docker pull fullaxx/rtorrent
-docker build -t="fullaxx/rtorrent" github.com/Fullaxx/rtorrent
+docker pull fullaxx/rtorrent:alpine
+docker build -f alpine/Dockerfile   -t="fullaxx/rtorrent:latest" github.com/Fullaxx/rtorrent
+
+docker pull fullaxx/rtorrent:bookworm
+docker build -f bookworm/Dockerfile -t="fullaxx/rtorrent:bookworm" github.com/Fullaxx/rtorrent
+
+docker pull fullaxx/rtorrent:bullseye
+docker build -f bullseye/Dockerfile -t="fullaxx/rtorrent:bullseye" github.com/Fullaxx/rtorrent
+
+docker pull fullaxx/rtorrent:noble
+docker build -f noble/Dockerfile    -t="fullaxx/rtorrent:noble" github.com/Fullaxx/rtorrent
+
+docker pull fullaxx/rtorrent:jammy
+docker build -f jammy/Dockerfile    -t="fullaxx/rtorrent:jammy" github.com/Fullaxx/rtorrent
+
+docker pull fullaxx/rtorrent:focal
+docker build -f focal/Dockerfile    -t="fullaxx/rtorrent:focal" github.com/Fullaxx/rtorrent
 ```
 
 ## Run the image
@@ -29,9 +47,9 @@ Output: Your downloaded data will reside here
 ```
 
 ## Optional Volume Options
-Configuration: You can place a custom rtorrent.rc in /srv/docker/rtorrent/config/
+Configuration: You can overwrite the default config
 ```
--v /srv/docker/rtorrent/config:/rtorrent/config
+-v /srv/docker/rtorrent/config/rtorrent.rc:/etc/rtorrent.rc
 ```
 Session State: Use this to save your session for fast restore/resume
 ```
