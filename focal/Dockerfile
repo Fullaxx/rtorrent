@@ -16,7 +16,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends rtorrent && \
 
 # ------------------------------------------------------------------------------
 # Configure rtorrent
-COPY rtorrent.rc /etc/rtorrent.rc
+COPY focal/rtorrent.rc /etc/rtorrent.rc
 
 # ------------------------------------------------------------------------------
 # Identify Volumes
