@@ -12,7 +12,7 @@ rtorrent running in docker
 ## Get the image from Docker Hub or build it locally
 ```
 docker pull fullaxx/rtorrent:alpine
-docker build -f alpine/Dockerfile   -t="fullaxx/rtorrent:latest" github.com/Fullaxx/rtorrent
+docker build -f alpine/Dockerfile   -t="fullaxx/rtorrent:alpine" github.com/Fullaxx/rtorrent
 
 docker pull fullaxx/rtorrent:bookworm
 docker build -f bookworm/Dockerfile -t="fullaxx/rtorrent:bookworm" github.com/Fullaxx/rtorrent
