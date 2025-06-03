@@ -10,7 +10,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 # ------------------------------------------------------------------------------
 # Install rtorrent and clean up
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends iproute2 rtorrent && \
+    apt-get install -y --no-install-recommends curl iproute2 rtorrent && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /var/tmp/* /tmp/* && \
     mkdir -p /rtorrent/autoload /rtorrent/torrents /rtorrent/session

@@ -6,7 +6,7 @@ LABEL author="Brett Kuskie <fullaxx@gmail.com>"
 # ------------------------------------------------------------------------------
 # Install rtorrent and clean up
 RUN apk update && \
-    apk add --no-cache bash iproute2 rtorrent && \
+    apk add --no-cache bash curl iproute2 rtorrent && \
     rm -rf /var/cache/apk/*
 
 # ------------------------------------------------------------------------------
