@@ -7,7 +7,7 @@ rtorrent running in docker
 [Ubuntu](https://hub.docker.com/_/ubuntu) (x64) Noble/Jammy/Focal
 
 ## Software
-* [rtorrent](https://rakshasa.github.io/rtorrent/) - An ncurses-based bittorrent application
+[rtorrent](https://rakshasa.github.io/rtorrent/) - An ncurses-based bittorrent application
 
 ## Get the image from Docker Hub or build it locally
 ```
