@@ -31,9 +31,11 @@ docker build -f focal/Dockerfile    -t="fullaxx/rtorrent:focal" github.com/Fulla
 ```
 
 ## Run the image
-Run the image using the default port
+Run the image using the default port \
+Optional: use screen to detach and re-attach
 ```
 docker run -it -p 49164:49164 fullaxx/rtorrent
+screen -S RTORRENT docker run -it --rm fullaxx/rtorrent
 ```
 
 ## Required Volume Options
@@ -54,4 +56,11 @@ Configuration: You can overwrite the default config
 Session State: Use this to save your session for fast restore/resume
 ```
 -v /srv/docker/rtorrent/session:/rtorrent/session
+```
+
+## Optional VPN Router
+Using the GATEWAY variable, you can change the default route \
+You will also need extra permissions for this
+```
+--cap-add=NET_ADMIN -e GATEWAY=172.18.0.2
 ```

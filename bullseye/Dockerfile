@@ -20,8 +20,8 @@ RUN apt-get update && \
 COPY bullseye/rtorrent.rc /etc/rtorrent.rc
 
 # ------------------------------------------------------------------------------
-# Add helper scripts
-COPY set_gateway.sh /usr/bin/set_gateway.sh
+# Add scripts
+COPY app/*.sh /app/
 
 # ------------------------------------------------------------------------------
 # Identify Volumes
@@ -31,4 +31,4 @@ VOLUME /rtorrent/session
 
 # ------------------------------------------------------------------------------
 # Define default command
-CMD ["rtorrent", "-n", "-o", "import=/etc/rtorrent.rc"]
+CMD ["/app/app.sh"]

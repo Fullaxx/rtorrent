@@ -1,8 +1,5 @@
 #!/bin/bash
 
-docker pull alpine:latest
-docker build -f alpine/Dockerfile -t "fullaxx/rtorrent:latest" .
-
 docker pull ubuntu:focal
 docker build -f focal/Dockerfile -t "fullaxx/rtorrent:focal" .
 
@@ -17,3 +14,7 @@ docker build -f bullseye/Dockerfile -t "fullaxx/rtorrent:bullseye" .
 
 docker pull debian:bookworm
 docker build -f bookworm/Dockerfile -t "fullaxx/rtorrent:bookworm" .
+
+docker pull alpine:latest
+docker build -f alpine/Dockerfile -t "fullaxx/rtorrent:alpine" .
+docker tag fullaxx/rtorrent:alpine fullaxx/rtorrent:latest
