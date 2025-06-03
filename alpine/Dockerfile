@@ -14,6 +14,10 @@ RUN apk update && \
 COPY alpine/rtorrent.rc /etc/rtorrent.rc
 
 # ------------------------------------------------------------------------------
+# Add helper scripts
+COPY set_gateway.sh /usr/bin/set_gateway.sh
+
+# ------------------------------------------------------------------------------
 # Identify Volumes
 VOLUME /rtorrent/autoload
 VOLUME /rtorrent/torrents
