@@ -13,4 +13,4 @@ ${GATEWAYARG} \
 -v `pwd`/autoload:/rtorrent/autoload \
 -v `pwd`/torrents:/rtorrent/torrents \
 -v `pwd`/session:/rtorrent/session \
-fullaxx/rtorrent:alpine
+ghcr.io/fullaxx/rtorrent:alpine
